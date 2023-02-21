@@ -1,0 +1,26 @@
+class:: WarpP
+summary:: Warp1 with density
+related:: TODO
+categories:: UGens>TODO
+
+description::
+
+Warp1 with density
+
+
+classmethods::
+
+method::ar, kr
+
+argument::TODO
+
+argument::TODO
+
+
+examples::
+
+code::
+
+{ WarpP.ar(/* TODO */) }.play
+
+::

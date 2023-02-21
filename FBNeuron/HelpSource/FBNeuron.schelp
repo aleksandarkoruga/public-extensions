@@ -1,0 +1,41 @@
+class:: FBNeuron
+summary:: Feedback neural network
+related:: TODO
+categories:: UGens>Generators>Chaotic
+
+description::
+
+Feedback neural network with sinusoidal activation function.
+
+
+classmethods::
+
+method::ar
+
+argument::variation
+
+Cutoff frequency for target variation/sec above which biases and weights will be updated
+
+argument::frequency
+
+Center driving frequency
+
+argument::spread
+
+Frequency spread of driving frequency
+
+argument::modulation
+
+Amount of frequency modulation on driving oscillator
+
+argument::crossfade
+
+Crossfade between multiplication and summation of phases (function output and driving oscillator)
+
+examples::
+
+code::
+
+{ FBNeuron.ar(900.asAudioRateInput,300.asAudioRateInput, 2.0.asAudioRateInput, 0.1.asAudioRateInput, 0.8.asAudioRateInput).dup }.play
+
+::
