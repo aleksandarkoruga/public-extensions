@@ -1,0 +1,1 @@
+Place the shader.frag and shader.vert inside your Supercollider installation folder (usually something like C:\Program Files\SuperCollider-3.13.0)
