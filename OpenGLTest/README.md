@@ -1,1 +1,10 @@
-Place the shader.frag and shader.vert inside your Supercollider installation folder (usually something like C:\Program Files\SuperCollider-3.13.0)
+Shader folder is now specified in the last argument of the UGEN.
+
+Known issues: your sc server will crash after failing to compile a shader 
+(you will get the error message from shader compilation in the sc console)
+
+
+
+
+ 
+

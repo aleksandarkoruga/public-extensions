@@ -1,6 +1,8 @@
+// //////////////////////////////////////////////////////////////////////
+// DO NOT CHANGE
+
 #version 430 core
 
-//ported from https://www.shadertoy.com/view/wdtyDH
 
 layout(location = 0) uniform int ssboSize; // Size of the SSBO (number of elements)
 layout(location = 3) uniform vec2 resolution;
@@ -13,11 +15,16 @@ layout(std430, binding = 2) buffer DataBuffer {
 
 layout(location = 0) out vec4 fragColor;  // Output to the framebuffer
 
+// //////////////////////////////////////////////////////////////////////
+
+
+
 // Wave equation parameters
 const float damping = 0.999; // Slight damping to prevent infinite energy
 const float delta = 1.0;
 const float space = 1.0;
 
+//ported from https://www.shadertoy.com/view/wdtyDH
 void main()
 {
     vec2 onePix = 1.0 / resolution;
