@@ -1,4 +1,9 @@
 (
+
+//the buffer inside openGL is 32*s.options.blockSize
+// so rescalereading frequency/space accordingly if you want to read "1 to1 "
+s.options
+
 a={
 	arg amp=1;
 	var out;
