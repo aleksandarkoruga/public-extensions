@@ -76,12 +76,28 @@ void main()
 
     // Add excitation from SSBO (optional)
     int index = int(gl_FragCoord.x / resolution.x * ssboSize);
+    
+
+    //comment if you want to change to next mode, this one is more useful if trying to just write audio for "reverb" like effect
+    float excitation =  step(abs( (coord.y-0.5)),0.01); 
+
+
+    //uncomment for waveform visualization
+    /*
     float excitation = abs( (coord.y-0.5) - 0.25*data[index]);
     excitation=(1.0-clamp(excitation, 0.0, 1.0));
     excitation = step(0.99,excitation);
-    //float excitation = (data[index]) * 0.1;
-    //excitation = excitation * float(coord.x < 0.51)*float(coord.x > 0.49)* float(coord.y < 0.51)*float(coord.y > 0.49);
+    */
+
+
+
+
+    //multipy excitation by sound intensity
     pressure+=excitation*data[index];
+
+
+
+
     //x = pressure. y = pressure velocity. Z and W = X and Y gradient
     fragColor = vec4(pressure, pVel, (p_right - p_left) / 2.0, (p_up - p_down) / 2.0);
 }
