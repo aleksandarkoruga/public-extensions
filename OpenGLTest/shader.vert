@@ -6,7 +6,6 @@ layout(location = 0) in vec2 vPos;     // Input position from vertex data
 
 // //////////////////////////////////////////////////////////////////////
 
-
 void main()
 {
     gl_Position =  vec4(vPos.xy, 0.0, 1.0); // Compute vertex position
